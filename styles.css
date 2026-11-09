@@ -99,6 +99,20 @@ p { color: var(--muted); }
 .package-features li::before { color: var(--blue-600); content: "✓"; font-weight: 800; }
 .package-card .text-link { margin-top: auto; }
 .pricing-note { margin: 1.5rem 0 0; font-size: .82rem; text-align: center; }
+.featured-section { padding-top: 0; }
+.featured-product { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 7vw, 6rem); align-items: center; padding: clamp(2rem, 5vw, 4.5rem); border-radius: 1.5rem; color: var(--white); background: var(--blue-950); box-shadow: var(--shadow); }
+.featured-product .eyebrow { color: #78d2ee; }
+.featured-product h2 { max-width: 12ch; }
+.featured-product p { max-width: 50ch; color: #c2d9e4; }
+.featured-product .button { margin-top: .7rem; color: var(--blue-950); background: var(--white); border-color: var(--white); box-shadow: none; }
+.featured-product .button:hover { color: var(--white); background: var(--blue-700); border-color: var(--blue-700); }
+.featured-details { padding: 1.5rem; border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+.product-url { display: block; margin-bottom: 1.5rem; color: #78d2ee; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; }
+.product-capabilities { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.product-capabilities li { display: grid; gap: .2rem; padding: 1rem 0; border-top: 1px solid rgba(255,255,255,.16); }
+.product-capabilities li:last-child { border-bottom: 1px solid rgba(255,255,255,.16); }
+.product-capabilities strong { color: var(--white); }
+.product-capabilities span { color: #c2d9e4; font-size: .88rem; }
 
 .why-grid { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: clamp(4rem, 10vw, 9rem); }
 .why-content { position: sticky; top: calc(var(--header-height) + 3rem); }
@@ -163,6 +177,7 @@ a.contact-detail:hover { text-decoration: underline; }
   .process-list { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 0; }
   .process-list li:nth-child(2) { margin-right: 0; border-right: 0; }
   .contact-card { grid-template-columns: 1fr; }
+  .featured-product { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
 @media (max-width: 760px) {
@@ -177,6 +192,7 @@ a.contact-detail:hover { text-decoration: underline; }
   .section-heading { display: block; }
   .section-heading > p { margin-top: 1rem; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .featured-product h2 { max-width: 15ch; }
   .why-content { position: static; }
   .about-brand { max-width: 420px; }
   .contact-section { padding-top: 0; }
